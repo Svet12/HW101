@@ -5,8 +5,8 @@ public class Radio {
     private int currentVolume;
     private final int stationCount;
 
-    public Radio(int numberOfStations) {
-        this.stationCount = numberOfStations;
+    public Radio(int stationCount) {
+        this.stationCount = stationCount;
     }
 
     public Radio() {

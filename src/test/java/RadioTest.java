@@ -173,7 +173,7 @@ public class RadioTest {
 
     @Test
     public void setCurrentStationRegularAboveTheLimit() {
-        Radio radio = new Radio(stationCount = 16);
+        Radio radio = new Radio(15);
 
         radio.setCurrentStation(9);
         radio.setCurrentStation(16);
@@ -185,7 +185,7 @@ public class RadioTest {
 
     @Test
     public void setCurrentStationNextAfterTheLimit() {
-        Radio radio = new Radio(stationCount:16 );
+        Radio radio = new Radio(15);
 
         radio.setCurrentStation(15);
         radio.nextStation();
@@ -197,13 +197,13 @@ public class RadioTest {
 
     @Test
     public void setCurrentStationGoingBeforeAboveTheLimit() {
-        Radio radio = new Radio(stationCount:16);
+        Radio radio = new Radio(15);
 
 
         radio.setCurrentStation(0);
         radio.prevStation();
         int actual = radio.getCurrentStation();
-        int expected = 15;
+        int expected = 14;
 
         Assertions.assertEquals(expected, actual);
     }
